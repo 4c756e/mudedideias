@@ -1,0 +1,35 @@
+
+.background{
+    background: rgb(255, 255, 255);
+    font-family: Helvetica, sans-serif;
+}
+
+#logo{
+    width: 8%;
+   }
+
+.border-bottom{
+    color: rgba(193,220,0);
+}
+
+.divisor{
+    border-bottom: 4px solid rgba(193,220,0);
+}
+
+.circulos{
+    background-color: white;
+    width: 100%;
+    padding: 20%;
+    border-radius: 2px;
+}
+
+.circulos:hover{
+    background-color: rgb(196, 196, 196);
+    cursor: pointer;
+}
+
+.col-sm{
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+    width: 100% !important;
+}
