@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body class="background" style="overflow: auto;">
+<body class="background" style="overflow: auto;overflow-x: hidden;" onload="IntroImagens(0)">
 
     <div class="py-3 text-center ">
         <img src="assets/image/logoPreto.png" id="logo">
@@ -18,88 +18,113 @@
     <div class="divisor">
      <div class="container">
       <div class="row">
-       <div class="col"><img src="assets/image/examples/Circles/lonasTopSelected.png" class="circulos"></div>
+       <div class="col"><img src="assets/image/examples/Circles/lonasTopSelected.png" class="circulos" id="botaoAll" onclick="CircleSelected(0)" onmouseover="" onmouseout=""></div>
 
-       <div class="col"><img src="assets/image/examples/Circles/lonasTop.png" class="circulos"></div>
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
+       <div class="col"><img src="assets/image/examples/Circles/lonasTop.png" class="circulos" id="botaoLonas"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoViaturas"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoMontras"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoIdent"></div>
 
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
-       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoPlacas"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoSinaletica"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoTexteis"></div>
+       <div class="col"><img src="assets/image/Circles/bandeiras.png" class="circulos" id="botaoBandeiras"></div>
       </div>
     </div>
     </div>
 
 
-    <div class="">
-     <div class="row">
-      <div class="col-sm">
-        <img src="assets/image/examples/1imagem.jpg" style="width: 100%;">
-      </div>
-      <div class="col-sm">
-        <img src="assets/image/examples/1imagem.jpg" style="width: 100%;">
-      </div>
-      <div class="col-sm">
-        <img src="assets/image/examples/1imagem.jpg" style="width: 100%;">
-      </div>
-      <div class="col-sm">
-        <img src="assets/image/examples/1imagem.jpg" style="width: 100%;">
-      </div>
-      <div class="col-sm">
-        <img src="assets/image/examples/1imagem.jpg" style="width: 100%;">
-      </div>
-     </div>
-    </div>
+    <div id="imagePlace"></div>
 
-        <!--
-    <div style="display: grid;">
-    <div class="galeria">
-        <figure class="galeria_i galeria_i--1 imgColor">
-          <img src="assets/image/examples/1imagem.jpg" class="galeria_i" onclick="ImageSelected(true,1)">
-        </figure>
-        <figure class="galeria_i galeria_i--2 imgColor">
-          <img src="assets/image/examples/2imagem.jpg" class="galeria_i" onclick="ImageSelected(true,2)">
-        </figure>
-        <figure class="galeria_i galeria_i--3 imgColor">
-          <img src="assets/image/examples/3imagem.jpg" class="galeria_i" onclick="ImageSelected(true,3)">
-        </figure>
-        <figure class="galeria_i galeria_i--4 imgColor">
-          <img src="assets/image/examples/4imagem.jpg" class="galeria_i" onclick="ImageSelected(true,4)">
-        </figure>
-      </div> <br>
-      <div class="galeria">
-        <figure class="galeria_i galeria_i--1 imgColor">
-          <img src="assets/image/examples/1imagem.jpg" class="galeria_i" onclick="ImageSelected(true,1)">
-        </figure>
-        <figure class="galeria_i galeria_i--2 imgColor">
-          <img src="assets/image/examples/2imagem.jpg" class="galeria_i" onclick="ImageSelected(true,2)">
-        </figure>
-        <figure class="galeria_i galeria_i--3 imgColor">
-          <img src="assets/image/examples/3imagem.jpg" class="galeria_i" onclick="ImageSelected(true,3)">
-        </figure>
-        <figure class="galeria_i galeria_i--4 imgColor">
-          <img src="assets/image/examples/4imagem.jpg" class="galeria_i" onclick="ImageSelected(true,4)">
-        </figure>
-      </div>
-    </div>-->
 
 <script>
+const imageBlank = "assets/image/semImagem.jpg";
+const imageList = [["assets/image/examples/1imagem.jpg",7],["assets/image/examples/2imagem.jpg",2],["assets/image/examples/3imagem.jpg",1],["assets/image/examples/4imagem.jpg",6],["assets/image/examples/5imagem.jpg",3],
+                   ["assets/image/examples/6imagem.jpg",4],["assets/image/examples/1imagem.jpg",7],["assets/image/examples/2imagem.jpg",2],["assets/image/examples/3imagem.jpg",1],["assets/image/examples/4imagem.jpg",6],
+                   ["assets/image/examples/5imagem.jpg",3],["assets/image/examples/6imagem.jpg",4],["assets/image/examples/1imagem.jpg",7],["assets/image/examples/2imagem.jpg",2],["assets/image/examples/3imagem.jpg",1],
+                   ["assets/image/examples/4imagem.jpg",6],["assets/image/examples/5imagem.jpg",3],]
+
+
+const circleAti = ["assets/image/services/placas.png","assets/image/services/lonas.png","assets/image/services/ident.png","assets/image/services/montras.png",
+                          "assets/image/services/sinaletica.png","assets/image/services/texteis.png","assets/image/services/viaturas.png","assets/image/services/bandeiras.png"]
+
+const circlebase = ["assets/image/services/placas.png","assets/image/services/lonas.png","assets/image/services/ident.png","assets/image/services/montras.png",
+                    "assets/image/services/sinaletica.png","assets/image/services/texteis.png","assets/image/services/viaturas.png","assets/image/services/bandeiras.png"]
+
+var selectedCircle=0;
+
+function IntroImagens(condition){
+  let imagePlace = document.getElementById('imagePlace');
+
+ if(condition!=0){
+
+ }else{
+  var totalImagens=imageList.length;
+  var rows=Math.ceil(totalImagens/5);
+  var cont=0;
+
+  while(rows>0){
+    let divRow = document.createElement('div');
+    divRow.className="row";
+
+    while(cont<5){
+    let divCol = document.createElement('div');
+    let imag = document.createElement('img');
+    imag.style.width="100%";
+
+    if(totalImagens>0){
+      imag.value=imageList[totalImagens-1][1];
+      imag.src=imageList[totalImagens-1][0];
+      divCol.classList.add("col-sm","imgColor");}
+    else{
+      imag.src=imageBlank;
+      divCol.classList.add("col-sm");}
+
+    divCol.appendChild(imag);
+    divRow.appendChild(divCol);
+    imagePlace.appendChild(divRow);
+
+    totalImagens-=1;
+    cont++;}
+
+    cont=0;
+    rows-=1;}}}
 
 function ExpandButtons(){
  
 }
 
-function CircleHover(){
-
+function CircleHover(circle,hover){
+  if(hover){document.getElementById(getCircle(circle)).src="";
+  }else{document.getElementById(getCircle(circle)).src="";}
 }
 
-function CircleSelected(){
+function CircleSelected(circle){
+  document.getElementById(getCircle(selectedCircle)).src="";
+  document.getElementById(getCircle(selectedCircle)).style.color="";
 
+  document.getElementById(getCircle(circle)).src="";
+  document.getElementById(getCircle(circle)).style.color="";
 }
-    
+
+function getCircle(which){
+  var circle;
+  switch(which){
+    case 0: circle="botaoTodos"; break;
+
+    case 1: circle="botaoLonas"; break;
+    case 2: circle="botaoViaturas"; break;
+    case 3: circle="botaoMontras"; break;
+    case 4: circle="botaoIdent"; break;
+
+    case 5: circle="botaoPlacas"; break;
+    case 6: circle="botaoSinaletica"; break;
+    case 7: circle="botaoTexteis"; break;
+    case 8: circle="botaoBandeiras"; break;
+  }
+  return circle;
+}
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

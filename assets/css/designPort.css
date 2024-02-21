@@ -33,3 +33,10 @@
     padding-left: 0% !important;
     width: 100% !important;
 }
+
+.imgColor  {background-color: rgba(193,220,0)}
+
+.imgColor img:hover {
+  opacity:0.3;
+  transition: 0.6s;
+  cursor: pointer;}
