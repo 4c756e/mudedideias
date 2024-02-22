@@ -1,6 +1,6 @@
 
 .background{
-    background: rgb(255, 255, 255);
+    background: rgb(40, 40, 40);
     font-family: Helvetica, sans-serif;
 }
 
@@ -13,18 +13,28 @@
 }
 
 .divisor{
-    border-bottom: 4px solid rgba(193,220,0);
+    border-bottom: 5px solid rgba(193,220,0);
+    background-color: white;
 }
 
+.divisorTop{
+ border-top: 5px solid rgba(193,220,0);
+ padding-top: 2%;
+ background-color: rgb(40, 40, 40);
+}
+
+
 .circulos{
-    background-color: white;
+    background-color: #ffffff;
     width: 100%;
-    padding: 20%;
+    margin: 10%;
+    padding: 10%;
     border-radius: 2px;
+    border-bottom: 5px solid white;
 }
 
 .circulos:hover{
-    background-color: rgb(196, 196, 196);
+    border-bottom: 5px solid rgb(60, 60, 60);
     cursor: pointer;
 }
 
@@ -34,9 +44,24 @@
     width: 100% !important;
 }
 
-.imgColor  {background-color: rgba(193,220,0)}
+.imgColor  {background-color: rgb(226, 255, 11);}
 
 .imgColor img:hover {
   opacity:0.3;
   transition: 0.6s;
   cursor: pointer;}
+
+.voltarBotao{
+    background-color: rgba(193,220,0) !important;
+    padding: 1%;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.voltarBotao:hover{
+    background-color: rgb(141, 159, 3) !important;
+    color: white !important;
+    
+}
