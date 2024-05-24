@@ -1,11 +1,14 @@
+body, html {
+  overflow-x: hidden;
+  }
 
 .background{
-    background: rgb(60, 60, 60);
+    background: rgb(255, 255, 255);
     font-family: Helvetica, sans-serif;
 }
 
 #logo{
- width: 8%;
+ width: 10%;
 }
 
 .forPC{
@@ -18,17 +21,193 @@
 
   #imagemPrincipal{
     width: 100%;
+    border-bottom: 4px solid rgb(190, 215, 0);
+    border-top: 4px solid rgb(190, 215, 0);
   }
 
-  .imgColor  {background-color: rgba(193,220,0)}
 
 .imgColor img:hover {
-  opacity:0.3;
   transition: 0.6s;
   cursor: pointer;}
 
+  
+.contactosEffect{
+  background-image: url(../image/footerBack.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 
-  @media screen and (max-width: 768px) {
+#_ContactoInfoPlace{
+  background-color: white;
+  margin-top: -5%;
+  padding-bottom: 1%;
+  padding-top: 2%;
+}
+
+.tituloContacto{
+  padding-top: 5%;
+  padding-bottom: 3%;
+  margin-top: 8%;
+  margin-left: 13%;
+  color: rgba(193,220,0);
+  font-weight: bold;
+  border-bottom: 2px solid rgba(104, 104, 104);
+}
+
+.contactoIcons{
+  width: 3%;
+  margin-right: 2%;
+}
+
+.primeiraColContactos{
+  margin-left: -15%;
+}
+
+.segundaLinhaInfo{
+  margin-left: 5%;
+}
+
+.contactosMargin{
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
+.contactoMapa{
+  width: 100%;
+  height: 300px;
+}
+
+.textoContactoTelefone{
+  font-size: 3vw;
+}
+
+.botaoMapa{
+  background-color: rgba(193,220,0);
+  color: white;
+  padding: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 22%;
+  border: none;
+  border-radius: 8px;
+  margin-left: -2%;
+}
+
+.horario{
+  margin-top: 10%;
+  text-align: center;
+  margin-right: 18%;
+}
+
+.contactoMapaTelefone{
+  width: 100%;
+  height: 250px;
+  padding: 8%;
+}
+
+.imagens{
+  width: 100%;
+}
+
+.tituloServicosCell{
+  width: 100%;
+  background-color: rgba(193,220,0);
+  color: rgba(31, 31, 31);
+  padding-top: 2%;
+}
+
+.cardServicosCell{
+  width: 85%;
+  height: 330px;
+  border-radius: 3%;
+  border-left: 4px solid rgba(31, 31, 31, 0.39);
+  border-bottom: 4px solid rgba(31, 31, 31, 0.39);
+  background-color: rgb(85, 85, 85);
+  color: rgba(193,220,0);
+}
+
+.titulosCards{
+  border-bottom: 1px solid white;
+  padding-bottom: 3%;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: medium;
+}
+
+.circuloCardsEsquerda{
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.circuloCardsDireita{
+  width: 40%;
+  margin-left: 27%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.textoServicosCell{
+  font-size: smaller;
+  margin-left: 10%;
+  margin-top: 10%;
+  color: white;
+}
+
+#fullScreen{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: rgba(104, 104, 104, 0.5);}
+
+.selectedCircle{
+  position: absolute;
+  width: 15%;
+  z-index: 5;
+  margin-top: 3%;
+  margin-left: 3%;
+  transform: rotate(270deg);
+}
+
+#ArrowCima{
+ top: 3%;
+}
+
+#ArrowBaixo{
+ bottom: 5%;
+}
+
+
+.selectedImage{
+  max-width: 100%;
+  width: auto;
+  z-index: 3;
+  position: fixed;
+  transform: rotate(270deg);
+  margin: 0 auto;
+  margin-right: 25%;
+  top: 35%;
+ }
+
+ .selectedArrows{
+  width: 30%;
+  z-index: 4;
+  position: fixed;
+  left: 32%;
+  padding: 5%;
+}
+
+
+@media screen and (max-width: 320px) {}
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 768px) {
+
+    #logo{
+      width: 8%;
+     }
 
     .forPC{
       display: none;
@@ -37,4 +216,89 @@
     .forCellphone{
       display: block;
     }
-  }
+
+    #logo{
+     width: 20%;
+    }
+
+    .col{
+      padding-right: 0% !important;
+      padding-left: 0% !important;
+      width: 100% !important;
+    }
+
+    .setasTelefoneBaixo{
+      width: 10%;
+      margin-left: 5%;
+      margin-top: 2%;
+    }
+
+    .setasTelefoneCima{
+      width: 10%;
+      margin-top: 2%;
+    }
+
+    .tituloContacto{
+      margin-left: 30%;
+      padding-top: 15%;
+    }
+
+    .contactoIcons{
+      width: 8%;
+      margin-right: 5%;
+    }
+
+    .segundaLinhaInfo{
+      margin-left: 13%;
+    }
+
+    .detail{
+      margin-top: 220%;
+      margin-right: 25%;
+    }}
+
+  /* ITEMS */
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0px;
+    background-color: rgb(190, 215, 0);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    border-bottom: 8px solid rgb(190, 215, 0);
+    border-top: 8px solid rgb(190, 215, 0);}
+
+    .item{
+      background-color: rgb(226, 255, 11);}
+
+    .item img:hover {
+      opacity:0.3;
+      transition: 0.6s;
+      cursor: pointer;}
+
+      .fullscreenImagePlace{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+    }
+    
+    .fullscreenClickPlace{
+        background-color: rgb(145, 145, 145, 0.75);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    
+    .selectedImage{
+        margin: 2%;
+        width: 75%;
+        margin-left: 13%;
+        margin-top: 3%;
+        z-index: 3;
+        position: fixed;
+    }
