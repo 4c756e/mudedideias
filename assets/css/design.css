@@ -21,8 +21,8 @@ body, html {
 
   #imagemPrincipal{
     width: 100%;
-    border-bottom: 4px solid rgb(190, 215, 0);
-    border-top: 4px solid rgb(190, 215, 0);
+    border-bottom: 4px solid rgb(181, 230, 29);
+    border-top: 4px solid rgb(181, 230, 29);
   }
 
 
@@ -117,8 +117,8 @@ body, html {
 }
 
 .cardServicosCell{
-  width: 85%;
-  height: 330px;
+  width: 90%;
+  height: 350px;
   border-radius: 3%;
   border-left: 4px solid rgba(31, 31, 31, 0.39);
   border-bottom: 4px solid rgba(31, 31, 31, 0.39);
@@ -128,7 +128,7 @@ body, html {
 
 .titulosCards{
   border-bottom: 1px solid white;
-  padding-bottom: 3%;
+  padding-bottom: 5%;
   margin-right: 10%;
   margin-left: 10%;
   font-size: medium;
@@ -181,7 +181,7 @@ body, html {
 }
 
 
-.selectedImage{
+.selectedImageCell{
   max-width: 100%;
   width: auto;
   z-index: 3;
@@ -263,20 +263,26 @@ body, html {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0px;
-    background-color: rgb(190, 215, 0);
+    background-color: rgb(181, 230, 29);
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
-    border-bottom: 8px solid rgb(190, 215, 0);
-    border-top: 8px solid rgb(190, 215, 0);}
+    border-bottom: 8px solid rgb(181, 230, 29);
+    border-top: 8px solid rgb(181, 230, 29);}
 
     .item{
-      background-color: rgb(226, 255, 11);}
+      background-color: rgb(181, 230, 29);}
 
     .item img:hover {
       opacity:0.3;
       transition: 0.6s;
       cursor: pointer;}
+
+    .itemServico img:hover{
+      opacity:0.3;
+      transition: 0.6s;
+      cursor: pointer;
+    }
 
       .fullscreenImagePlace{
         width: 100%;
@@ -301,4 +307,23 @@ body, html {
         margin-top: 3%;
         z-index: 3;
         position: fixed;
+    }
+
+    #buttonCircleBandeiras,#buttonCircleMontras,#buttonCircleIdent,#buttonCircleLonas,#buttonCirclePlacas,#buttonCircleSinalet,#buttonCircleViat,#buttonCircleTexteis{
+      width: 45%;
+      padding: 3%;
+      background: rgb(181, 230, 29);
+      cursor: pointer;
+    }
+
+    #buttonSection{
+      margin-right: 10%;
+      margin-left: 12%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+    .textInfo{
+      color: white;
+      margin-top: 5%;
     }

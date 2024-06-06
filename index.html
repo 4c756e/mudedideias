@@ -18,43 +18,150 @@
   </div>
 
   <div style="display: none;" id="FullScreen" class="fullscreenImagePlace">
-    <div class="fullscreenClickPlace" onclick="ExpandButtons(1,false)">
-    <img src="assets/image/semImagem.jpg" class="selectedImage" id="TheImage"></div>
-    <!--<div class="fullscreenClickPlace" onclick="ExpandButtons(1,false)"></div>-->
+    <div class="fullscreenClickPlace" onclick="CloseSelectedPC()">
+    <img src="assets/image/semImagem.jpg" class="selectedImage" id="ImageFull"></div>
   </div>
 
   <div class="grid-container">
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
+   <div class="item"><img src="assets/image/examples/start/start01.png" style="width: 100%;" onclick="ExpandButtonPC(1)" id="Imagem1"></div>
+   <div class="item"><img src="assets/image/examples/start/start02.png" style="width: 100%;" onclick="ExpandButtonPC(2)" id="Imagem2"></div>
+   <div class="item"><img src="assets/image/examples/start/start03.png" style="width: 100%;" onclick="ExpandButtonPC(3)" id="Imagem3"></div>
 
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
+   <div class="item"><img src="assets/image/examples/start/start04.png" style="width: 100%;" onclick="ExpandButtonPC(5)" id="Imagem5"></div>
+   <div class="item"><img src="assets/image/examples/start/start05.png" style="width: 100%;" onclick="ExpandButtonPC(6)" id="Imagem6"></div>
+   <div class="item"><img src="assets/image/examples/start/start06.png" style="width: 100%;" onclick="ExpandButtonPC(7)" id="Imagem7"></div>
 
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
-   <div class="item"><img src="assets/image/examples/placas06.png" style="width: 100%;"></div>
+   <div class="item"><img src="assets/image/examples/start/start07.png" style="width: 100%;" onclick="ExpandButtonPC(8)" id="Imagem8"></div>
+   <div class="item"><img src="assets/image/examples/start/start08.png" style="width: 100%;" onclick="ExpandButtonPC(9)" id="Imagem9"></div>
+   <div class="item"><img src="assets/image/examples/start/start09.png" style="width: 100%;" onclick="ExpandButtonPC(10)" id="Imagem10"></div>
   </div>
 
-  <div class="row">
+  <div class="row" id="buttonSection">
    <div class="col">
     <div class="row">
-      <img src="assets/image/Circles/ident.png" style="width: 10%;"> <b>Identidade Visual</b>
-      <img src="assets/image/Circles/ident.png" style="width: 10%;">
+      <img src="assets/image/MainCircles/bandeirasPrePc.png" id="buttonCircleBandeiras" style="border-radius:3% 0% 0% 0%;" onclick="SelectButton(0)" onmouseover="ButtonHover(true,0)" onmouseout="ButtonHover(false,0)">
+      <img src="assets/image/MainCircles/montrasPrePc.png" id="buttonCircleMontras" style="border-radius:0% 3% 0% 0%;" onclick="SelectButton(1)" onmouseover="ButtonHover(true,1)" onmouseout="ButtonHover(false,1)">
     </div>
-    <div class="row"><img src="assets/image/Circles/ident.png" style="width: 10%;"></div>
-    <div class="row"><img src="assets/image/Circles/ident.png" style="width: 10%;"></div>
-    <div class="row"><img src="assets/image/Circles/ident.png" style="width: 10%;"></div>
+    <div class="row">
+      <img src="assets/image/MainCircles/lonasPrePc.png" id="buttonCircleLonas" onclick="SelectButton(2)" onmouseover="ButtonHover(true,2)" onmouseout="ButtonHover(false,2)">
+      <img src="assets/image/MainCirclesSelect/identPrePc.png" id="buttonCircleIdent" onclick="SelectButton(3)" onmouseover="ButtonHover(true,3)" onmouseout="ButtonHover(false,3)">
+    </div>
+    <div class="row">
+      <img src="assets/image/MainCircles/placasPrePc.png" id="buttonCirclePlacas" onclick="SelectButton(4)" onmouseover="ButtonHover(true,4)" onmouseout="ButtonHover(false,4)">
+      <img src="assets/image/MainCircles/sinaletPrePc.png" id="buttonCircleSinalet" onclick="SelectButton(5)" onmouseover="ButtonHover(true,5)" onmouseout="ButtonHover(false,5)">
+    </div>
+    <div class="row">
+      <img src="assets/image/MainCircles/viaturasPrePc.png" id="buttonCircleViat" onclick="SelectButton(6)" onmouseover="ButtonHover(true,6)" onmouseout="ButtonHover(false,6)">
+      <img src="assets/image/MainCircles/texteisPrePc.png" id="buttonCircleTexteis" onclick="SelectButton(7)" onmouseover="ButtonHover(true,7)" onmouseout="ButtonHover(false,7)">
+    </div>
    </div>
-   <div class="col">
+   <div class="col" id="" style="background-color: rgb(65, 65, 65);margin-left: 1%;border-radius: 1%;">
+    <img src="assets/image/Circles/ident.png" style="width: 45%;margin-left: 28%;margin-right: 28%;margin-top: 15%;" id="CircleSelected">
+
+    <div id="infoIdent" style="display: block;">
+    <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Identidade Visual</b></h2>
+    <h5 class="text-center textInfo" style="margin-top: 5%;">- Concepção gráfica de marcas ou logotipos;</h5>
+    <h5 class="text-center textInfo">- Cartões de visitas;</h5>
+    <h5 class="text-center textInfo">- Papel de carta e envelopes;</h5>
+    <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Capas e porta documentos;</h5>
+    </div>
+
+    <div id="infoBandeiras" style="display: none;">
+      <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Bandeiras</b></h2>
+      <h5 class="text-center textInfo" style="margin-top: 5%;">- Tipos pena ou gota;</h5>
+      <h5 class="text-center textInfo">- Normais standard;</h5>
+      <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Pendões;</h5>
+    </div>
+    
+    <div id="infoLonas" style="display: none;">
+      <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Lonas e Expositores</b></h2>
+      <h5 class="text-center textInfo" style="margin-top: 5%;">- Impressão digital;</h5>
+      <h5 class="text-center textInfo">- Coladas vinil recorte especial BANNER;</h5>
+      <h5 class="text-center textInfo">- Roll Ups;</h5>
+      <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Pop Ups ou Stands;</h5>
+    </div>
+
+    <div id="infoSinalet" style="display: none;">
+      <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Sinalética</b></h2>
+      <h5 class="text-center textInfo" style="margin-top: 5%;">- Identificação;</h5>
+      <h5 class="text-center textInfo">- Obrigatória;</h5>
+      <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Direção;</h5>
+    </div>
+  
+      <div id="infoMontras" style="display: none;">
+        <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Montras</b></h2>
+        <h5 class="text-center textInfo" style="margin-top: 5%;">- Decoração vinil recorte;</h5>
+        <h5 class="text-center textInfo">- Decoração vinil imitação de vidro fosco;</h5>
+        <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Decoração vinil impresso micro-perfurado;</h5>
+      </div>
+      
+      <div id="infoTexteis" style="display: none;">
+        <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Texteis</b></h2>
+        <h5 class="text-center textInfo" style="margin-top: 5%;">- T-shirts, polos e sweats;</h5>
+        <h5 class="text-center textInfo">- Flex termo-soldavel;</h5>
+        <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Bordado e serigrafia;</h5>
+      </div>
+
+      <div id="infoViat" style="display: none;">
+        <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Viaturas</b></h2>
+              <h5 class="text-center textInfo" style="margin-top: 5%;">- Decoração vinil recorte;</h5>
+      <h5 class="text-center textInfo">- Decoração vinil impresso e laminação UV;</h5>
+      <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Decoração vinil reflector especial <br>viaturas prioritárias;</h5>
+      </div>
+      
+      <div id="infoPlacas" style="display: none;">
+        <h2 class="text-center" style="margin-top: 5%;color:  rgb(181, 230, 29);border-bottom: 4px solid white;padding-bottom: 5%;"><b>Placas e Reclamos</b></h2>
+        <h5 class="text-center textInfo" style="margin-top: 5%;">- Flat e Placas;</h5>
+        <h5 class="text-center textInfo">- Luz indireta;</h5>
+        <h5 class="text-center textInfo">- Frente em Telas;</h5>
+        <h5 class="text-center textInfo">- DIBON, Acrílico e PVC;</h5>
+        <h5 class="text-center textInfo" style="padding-bottom: 5%;">- Luminosos;</h5>
+      </div>
 
    </div>
+   <div class="col" style="background-color: rgb(255, 255, 255);margin-left: 3%;">
+
+    <div class="itemServico"><img src="assets/image/examples/ident/ident01.png" style="width: 84%;" id="Imagem11" onclick="ExpandButtonPC(11)"></div>
+    <div class="itemServico"><img src="assets/image/examples/ident/ident02.png" style="width: 84%;" id="Imagem12" onclick="ExpandButtonPC(12)"></div>
+    <div class="itemServico"><img src="assets/image/examples/ident/ident03.png" style="width: 84%;" id="Imagem13" onclick="ExpandButtonPC(13)"></div>
+    <div class="itemServico"><img src="assets/image/examples/ident/ident04.png" style="width: 84%;" id="Imagem14" onclick="ExpandButtonPC(14)"></div>
+   </div>
   </div>
+
+  <div class="grid-container" style="margin-bottom: 10%;">
+    <div class="item"><img src="assets/image/examples/start2/start01.png" style="width: 100%;" id="Imagem15" onclick="ExpandButtonPC(15)"></div>
+    <div class="item"><img src="assets/image/examples/start2/start02.png" style="width: 100%;" id="Imagem16" onclick="ExpandButtonPC(16)"></div>
+    <div class="item"><img src="assets/image/examples/start2/start03.png" style="width: 100%;" id="Imagem17" onclick="ExpandButtonPC(17)"></div>
+ 
+    <div class="item"><img src="assets/image/examples/start2/start04.png" style="width: 100%;" id="Imagem18" onclick="ExpandButtonPC(18)"></div>
+    <div class="item"><img src="assets/image/examples/start2/start05.png" style="width: 100%;" id="Imagem19" onclick="ExpandButtonPC(19)"></div>
+    <div class="item"><img src="assets/image/examples/start2/start06.png" style="width: 100%;" id="Imagem20" onclick="ExpandButtonPC(20)"></div>
+ 
+    <div class="item"><img src="assets/image/examples/start2/start07.png" style="width: 100%;" id="Imagem21" onclick="ExpandButtonPC(21)"></div>
+    <div class="item"><img src="assets/image/examples/start2/start08.png" style="width: 100%;" id="Imagem22" onclick="ExpandButtonPC(22)"></div>
+    <div class="item"><img src="assets/image/examples/start2/start09.png" style="width: 100%;" id="Imagem23" onclick="ExpandButtonPC(23)"></div>
+   </div>
+
+   <div class="row" style="background-color: rgb(65, 65, 65);color: rgb(181, 230, 29);">
+    <div class="col" style="margin-left: 20%;margin-top: 2%;">
+      <div style="margin-top: 4%;"><img src="assets/image/telefoneVerde.png" class="contactoIcons">(+351) 91 405 94 72</div>
+         <div class="segundaLinhaInfo">(+351) 243 581 581</div>
+         
+         <div style="margin-top: 4%;"><img src="assets/image/correioVerde.png" class="contactoIcons">geral@mudedideias.com</div>
+         <div class="segundaLinhaInfo">mudedideias@gmail.com</div>
+     
+         <div style="margin-top: 4%;"><img src="assets/image/localizacaoVerde.png" class="contactoIcons">Zona Industrial-Lote 14B</div>
+         <div class="segundaLinhaInfo">2125-363 Muge</div>
+         <div style="margin-top: 4%;margin-bottom: 4%;">Segunda à sexta-feira das 9h00 às 13h00 e das 14h30 às 18h30</div>
+    </div>
+    <div class="col">
+      <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" style="width: 60%;height: 80%;margin-top: 5%;"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCqeKtkpFmwWgsO0CgBRM-CT2Civ8oYui0&q=39.094572, -8.716552&maptype=satellite&zoom=18&language=pt"></iframe></div>
+   </div>
 
 </div>
 
-<div class="forCellphone">
+<div class="forCellphone" style="background: rgb(108, 108, 108);">
 
       <div class="py-3 text-center" style="background: rgb(255, 255, 255);">
         <a href="index.html"><img src="assets/image/logoPreto.png" id="logo"></a>
@@ -62,7 +169,7 @@
 
   <div style="display: none;" id="Selected">
     <img src="assets/image/setasTelefoneCima.png" id="ArrowCima" class="selectedArrows" onclick="ArrowNextOrPrev(true)">
-    <img src="assets/image/examples/1imagem.jpg" id="TheImage" class="selectedImage">
+    <img src="assets/image/examples/start/start01.png" id="BigImage" class="selectedImageCell">
     <img src="assets/image/setasTelefoneBaixo.png" id="ArrowBaixo" class="selectedArrows" onclick="ArrowNextOrPrev(false)">
     <div id="fullScreen" onclick="CloseSelected()"></div>
   </div>
@@ -70,20 +177,20 @@
   <div style="margin-bottom: 5%;border-top: 4px solid rgb(190, 215, 0);">
   <div>
   <div class="row">
-   <div class="col"><img src="assets/image/examples/ident08.png" class="imagens" onclick="ExpandButton(0)"></div>
-   <div class="col"><img src="assets/image/examples/sinalet02.png" class="imagens" onclick="ExpandButton(1)"></div>
+   <div class="col"><img src="assets/image/examples/start/start01.png" class="imagens" onclick="ExpandButton(0)"></div>
+   <div class="col"><img src="assets/image/examples/start/start02.png" class="imagens" onclick="ExpandButton(1)"></div>
   </div>
   <div class="row">
-    <div class="col"><img src="assets/image/examples/viat01.png" class="imagens" onclick="ExpandButton(2)"></div>
-    <div class="col"><img src="assets/image/examples/lonas06.png" class="imagens" onclick="ExpandButton(3)"></div>
+    <div class="col"><img src="assets/image/examples/start/start03.png" class="imagens" onclick="ExpandButton(2)"></div>
+    <div class="col"><img src="assets/image/examples/start/start04.png" class="imagens" onclick="ExpandButton(3)"></div>
    </div>
    <div class="row">
-    <div class="col"><img src="assets/image/examples/texteis02.png" class="imagens" onclick="ExpandButton(4)"></div>
-    <div class="col"><img src="assets/image/examples/placas01.png" class="imagens" onclick="ExpandButton(5)"></div>
+    <div class="col"><img src="assets/image/examples/start/start05.png" class="imagens" onclick="ExpandButton(4)"></div>
+    <div class="col"><img src="assets/image/examples/start/start06.png" class="imagens" onclick="ExpandButton(5)"></div>
    </div>
    <div class="row">
-    <div class="col"><img src="assets/image/examples/montras04.png" class="imagens" onclick="ExpandButton(6)"></div>
-    <div class="col"><img src="assets/image/examples/viat03.png" class="imagens" onclick="ExpandButton(7)"></div>
+    <div class="col"><img src="assets/image/examples/start/start07.png" class="imagens" onclick="ExpandButton(6)"></div>
+    <div class="col"><img src="assets/image/examples/start/start08.png" class="imagens" onclick="ExpandButton(7)"></div>
    </div>
    <div id="showArrow" style="border-top: 4px solid rgb(190, 215, 0);display: block;">
      <img src="assets/image/setasTelefoneBaixo.png" class="setasTelefoneBaixo" onclick="ShowMore(true)" style="margin-left: 45%;"> 
@@ -92,20 +199,20 @@
 
    <div id="SecondRow" style="display:none;">
     <div class="row">
-      <div class="col"><img src="assets/image/examples/ident02.png" class="imagens" onclick="ExpandButton(8)"></div>
-      <div class="col"><img src="assets/image/examples/viat05.png" class="imagens" onclick="ExpandButton(9)"></div>
+      <div class="col"><img src="assets/image/examples/start/start09.png" class="imagens" onclick="ExpandButton(8)"></div>
+      <div class="col"><img src="assets/image/examples/start2/start01.png" class="imagens" onclick="ExpandButton(9)"></div>
      </div>
      <div class="row">
-       <div class="col"><img src="assets/image/examples/sinalet01.png" class="imagens" onclick="ExpandButton(10)"></div>
-       <div class="col"><img src="assets/image/examples/viat02.png" class="imagens" onclick="ExpandButton(11)"></div>
+       <div class="col"><img src="assets/image/examples/start2/start02.png" class="imagens" onclick="ExpandButton(10)"></div>
+       <div class="col"><img src="assets/image/examples/start2/start03.png" class="imagens" onclick="ExpandButton(11)"></div>
       </div>
       <div class="row">
-       <div class="col"><img src="assets/image/examples/lonas04.png" class="imagens" onclick="ExpandButton(12)"></div>
-       <div class="col"><img src="assets/image/examples/ident09.png" class="imagens" onclick="ExpandButton(13)"></div>
+       <div class="col"><img src="assets/image/examples/start2/start04.png" class="imagens" onclick="ExpandButton(12)"></div>
+       <div class="col"><img src="assets/image/examples/start2/start05.png" class="imagens" onclick="ExpandButton(13)"></div>
       </div>
       <div class="row">
-        <div class="col"><img src="assets/image/examples/ident06.png" class="imagens" onclick="ExpandButton(14)"></div>
-        <div class="col"><img src="assets/image/examples/lonas02.png" class="imagens" onclick="ExpandButton(15)"></div>
+        <div class="col"><img src="assets/image/examples/start2/start06.png" class="imagens" onclick="ExpandButton(14)"></div>
+        <div class="col"><img src="assets/image/examples/start2/start07.png" class="imagens" onclick="ExpandButton(15)"></div>
        </div>
        <div style="border-top: 4px solid rgb(190, 215, 0);">
          <img src="assets/image/setasTelefoneCima.png" class="setasTelefoneCima" onclick="ShowMore(false)" style="margin-left: 45%;">
@@ -114,7 +221,7 @@
   </div>
 
  <div>
-  <div class="container" style="margin-top: 13%;border-top: 2px solid rgb(85, 85, 85,0.65);margin-bottom: 17%;">
+  <div class="container" style="margin-top: 13%;margin-bottom: 17%;">
    <div class="row"><div class="tituloServicosCell text-center"><b><h4>Serviços</h4></b></div></div>
  <div class="row" style="margin-top: 5%;">
   <div class="col">
@@ -149,8 +256,7 @@
     <h6 class="text-center titulosCards"><b>Identidade <br> Visual</b></h6>
     <div class="textoServicosCell"> - Concepção gráfica <br> de marcas ou logotipos; <br>
       - Cartões de visitas;<br>
-      - Papel de carta e envelopes;<br>
-      - Capas e porta documentos;<br></div>
+      - Papel de carta e envelopes;<br></div>
   </div>
 
   </div>
@@ -171,7 +277,7 @@
     <h6 class="text-center titulosCards"><b>Viaturas</b></h6>
     <div class="textoServicosCell"> - Decoração vinil recorte; <br>
       - Decoração vinil impresso e laminação UV;<br>
-      - Decoração vinil reflector especial viaturas prioritários;<br></div>
+      - Decoração vinil reflector especial viaturas prioritárias;<br></div>
   </div>
 
   <div style="margin-left: 6%;margin-top: 10%;" class="cardServicosCell">
@@ -226,33 +332,60 @@
 </div>
 
 <script>
-const imageListCell = [["assets/image/examples/ident08.png",7],["assets/image/examples/sinalet02.png",2],
-                       ["assets/image/examples/viat01.png",1],["assets/image/examples/lonas06.png",6],
+const imageListCell = ["assets/image/examples/start/start01.png","assets/image/examples/start/start02.png",
+                       "assets/image/examples/start/start03.png","assets/image/examples/start/start04.png",
 
-                       ["assets/image/examples/texteis02.png",3],["assets/image/examples/placas01.png",4],
-                       ["assets/image/examples/montras04.png",7],["assets/image/examples/viat03.png",2],
+                       "assets/image/examples/start/start05.png","assets/image/examples/start/start06.png",
+                       "assets/image/examples/start/start07.png","assets/image/examples/start/start08.png",
 
-                       ["assets/image/examples/ident02.png",1],["assets/image/examples/viat05.png",6,],
-                       ["assets/image/examples/sinalet01.png",3],["assets/image/examples/viat02.png",8],
+                       "assets/image/examples/start/start09.png","assets/image/examples/start2/start01.png",
+                       "assets/image/examples/start2/start02.png","assets/image/examples/start2/start03.png",
 
-                       ["assets/image/examples/lonas04.png",7],["assets/image/examples/ident09.png",2],
-                       ["assets/image/examples/ident06.png",5],["assets/image/examples/lonas02.png",8]]
+                       "assets/image/examples/start2/start04.png","assets/image/examples/start2/start05.png",
+                       "assets/image/examples/start2/start06.png","assets/image/examples/start2/start07.png"]
 
-const circleAti = ["assets/image/Circles/lonas.png","assets/image/Circles/viat.png",
-                   "assets/image/Circles/montras.png","assets/image/Circles/ident.png",
-                   "assets/image/Circles/placas.png","assets/image/Circles/sinalet.png",
-                   "assets/image/Circles/texteis.png","assets/image/Circles/bandeiras.png"]
+
+const hoverImages = [["buttonCircleBandeiras","assets/image/MainCirclesSelect/bandeirasPrePc.png","assets/image/MainCircles/bandeirasPrePc.png","infoBandeiras","assets/image/Circles/bandeiras.png"]
+                    ,["buttonCircleMontras","assets/image/MainCirclesSelect/montrasPrePc.png","assets/image/MainCircles/montrasPrePc.png","infoMontras","assets/image/Circles/montras.png"]
+                    ,["buttonCircleLonas","assets/image/MainCirclesSelect/lonasPrePc.png","assets/image/MainCircles/lonasPrePc.png","infoLonas","assets/image/Circles/lonas.png"]
+                    ,["buttonCircleIdent","assets/image/MainCirclesSelect/identPrePc.png","assets/image/MainCircles/identPrePc.png","infoIdent","assets/image/Circles/ident.png"]
+                    ,["buttonCirclePlacas","assets/image/MainCirclesSelect/placasPrePc.png","assets/image/MainCircles/placasPrePc.png","infoPlacas","assets/image/Circles/placas.png"]
+                    ,["buttonCircleSinalet","assets/image/MainCirclesSelect/sinaletPrePc.png","assets/image/MainCircles/sinaletPrePc.png","infoSinalet","assets/image/Circles/sinalet.png"]
+                    ,["buttonCircleViat","assets/image/MainCirclesSelect/viaturasPrePc.png","assets/image/MainCircles/viaturasPrePc.png","infoViat","assets/image/Circles/viat.png"]
+                    ,["buttonCircleTexteis","assets/image/MainCirclesSelect/texteisPrePc.png","assets/image/MainCircles/texteisPrePc.png","infoTexteis","assets/image/Circles/texteis.png"]]
+
+const circleImages = [["assets/image/examples/bandeiras/bandeiras01.png","assets/image/examples/bandeiras/bandeiras02.png","assets/image/examples/bandeiras/bandeiras03.png","assets/image/examples/bandeiras/bandeiras04.png"],
+                      ["assets/image/examples/montras/montras01.png","assets/image/examples/montras/montras02.png","assets/image/examples/montras/montras03.png","assets/image/examples/montras/montras04.png"],
+                      ["assets/image/examples/lonas/lonas01.png","assets/image/examples/lonas/lonas02.png","assets/image/examples/lonas/lonas03.png","assets/image/examples/lonas/lonas04.png"],
+                      ["assets/image/examples/ident/ident01.png","assets/image/examples/ident/ident02.png","assets/image/examples/ident/ident03.png","assets/image/examples/ident/ident04.png"],
+                      ["assets/image/examples/placas/placas01.png","assets/image/examples/placas/placas02.png","assets/image/examples/placas/placas03.png","assets/image/examples/placas/placas04.png"],
+                      ["assets/image/examples/sinalet/sinalet03.png","assets/image/examples/sinalet/sinalet02.png","assets/image/examples/sinalet/sinalet05.png","assets/image/examples/sinalet/sinalet04.png"],
+                      ["assets/image/examples/viat/viat01.png","assets/image/examples/viat/viat02.png","assets/image/examples/viat/viat06.png","assets/image/examples/viat/viat07.png"],
+                      ["assets/image/examples/texteis/texteis01.png","assets/image/examples/texteis/texteis02.png","assets/image/examples/texteis/texteis03.png","assets/image/examples/texteis/texteis04.png"]]
+
 var mapaTelefone = true;
 var selectedNumber=0;
+var selectedButton=3;
 
 function ExpandButton(number){
  document.getElementById("Selected").style.display="block";
- document.getElementById("TheImage").src=imageListCell[number][0];
+ document.getElementById("BigImage").src=imageListCell[number];
  selectedNumber=number;
+}
+
+function ExpandButtonPC(number){
+ document.getElementById("FullScreen").style.display="block";
+ document.getElementById("ImageFull").src=document.getElementById("Imagem"+number).src;
+ selectedNumber=number;
+
 }
 
 function CloseSelected(){
   document.getElementById("Selected").style.display="none";
+}
+
+function CloseSelectedPC(){
+  document.getElementById("FullScreen").style.display="none";
 }
 
 function ShowMore(tof){
@@ -271,7 +404,6 @@ function abrirMapa(){
      mapaTelefone=false;
      document.getElementById("_BotaoMapa").value="Fechar Mapa";
      document.getElementById("_Mapa").style.display="flex";
-     //window.scrollTo(0, document.body.scrollHeight);
      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
     else
     {mapaTelefone=true;
@@ -286,15 +418,37 @@ function abrirMapa(){
   if(selectedNumber>15){selectedNumber=0;}
   else if(selectedNumber<0){selectedNumber=15;}
 
-  document.getElementById("TheImage").src=imageListCell[selectedNumber][0];
+  document.getElementById("BigImage").src=imageListCell[selectedNumber];
  }
   
- function GaleriaHover(know){
-   if(know){
-    document.getElementById("imagemPrincipal").src="assets/image/GaleriaImagemClick.png";
-   }else{
-    document.getElementById("imagemPrincipal").src="assets/image/GaleriaImagem.png";
-   }
+ function ButtonHover(know,number){
+  if(number!=selectedButton){
+     if(know){
+      document.getElementById(hoverImages[number][0]).src=hoverImages[number][1];
+    }else{
+      document.getElementById(hoverImages[number][0]).src=hoverImages[number][2];
+   }}
+ }
+
+ function SelectButton(number){
+  document.getElementById(hoverImages[selectedButton][0]).src=hoverImages[selectedButton][2];
+  document.getElementById(hoverImages[selectedButton][3]).style.display="none";
+
+  selectedButton=number;
+
+  document.getElementById(hoverImages[selectedButton][0]).src=hoverImages[selectedButton][1];
+  document.getElementById("CircleSelected").src=hoverImages[selectedButton][3];
+  document.getElementById(hoverImages[selectedButton][3]).style.display="block";
+  document.getElementById("CircleSelected").src=hoverImages[selectedButton][4];
+
+  document.getElementById("Imagem11").src=circleImages[selectedButton][0];
+  document.getElementById("Imagem12").src=circleImages[selectedButton][1];
+  document.getElementById("Imagem13").src=circleImages[selectedButton][2];
+  document.getElementById("Imagem14").src=circleImages[selectedButton][3];
+ }
+
+ function PutInfo(number){
+  
  }
     
 </script>
